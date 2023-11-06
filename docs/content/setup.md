@@ -20,7 +20,7 @@ Get your OpenAI API key from: [https://platform.openai.com/account/api-keys](htt
 
     You can set up a paid account at [Manage account > Billing > Overview](https://platform.openai.com/account/billing/overview).
 
-[openai/api limits]: https://platform.openai.com/docs/guides/rate-limits/overview#:~:text=Free%20trial%20users,RPM%0A40%2C000%20TPM
+
 
 !!! important
     It's highly recommended that you keep track of your API costs on [the Usage page](https://platform.openai.com/account/usage).
@@ -80,8 +80,7 @@ Get your OpenAI API key from: [https://platform.openai.com/account/api-keys](htt
     AutoGPT uses a browser in headless mode by default: `HEADLESS_BROWSER=True`.
     Please do not change this setting in combination with Docker, or AutoGPT will crash.
 
-[Docker Hub]: https://hub.docker.com/r/significantgravitas/auto-gpt
-[repository]: https://github.com/Significant-Gravitas/AutoGPT
+
 
 
 ### Set up with Git
@@ -121,7 +120,7 @@ Get your OpenAI API key from: [https://platform.openai.com/account/api-keys](htt
     hidden files, follow the instructions for your specific operating system:
     [Windows][show hidden files/Windows], [macOS][show hidden files/macOS].
 2. Create a copy of `.env.template` and call it `.env`;
-    if you're already in a command prompt/terminal window: `cp .env.template .env`.
+    if you're already in a command prompt/terminal window:.
 3. Open the `.env` file in a text editor.
 4. Find the line that says `OPENAI_API_KEY=`.
 5. After the `=`, enter your unique OpenAI API Key *without any quotes or spaces*.
@@ -154,10 +153,7 @@ Get your OpenAI API key from: [https://platform.openai.com/account/api-keys](htt
     Details can be found in the [openai-python docs], and in the [Azure OpenAI docs] for the embedding model.
     If you're on Windows you may need to install an [MSVC library](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170).
 
-[show hidden files/Windows]: https://support.microsoft.com/en-us/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5
-[show hidden files/macOS]: https://www.pcmag.com/how-to/how-to-access-your-macs-hidden-files
-[openai-python docs]: https://github.com/openai/openai-python#microsoft-azure-endpoints
-[Azure OpenAI docs]: https://learn.microsoft.com/en-us/azure/cognitive-services/openai/tutorials/embeddings?tabs=command-line
+
 
 
 ## Running AutoGPT
@@ -199,8 +195,8 @@ Once you have a recent version of Docker Compose, run the commands below in your
 
 You can pass extra arguments, e.g. running with `--gpt3only` and `--continuous`:
 
-```shell
-docker compose run --rm auto-gpt --gpt3only --continuous
+docker compose run --r```shell
+m auto-gpt --gpt3only --continuous
 ```
 
 If you dare, you can also build and run it with "vanilla" docker commands:
@@ -211,7 +207,7 @@ docker run -it --env-file=.env -v $PWD:/app auto-gpt
 docker run -it --env-file=.env -v $PWD:/app --rm auto-gpt --gpt3only --continuous
 ```
 
-[Docker Compose file]: https://github.com/Significant-Gravitas/AutoGPT/blob/master/autogpts/autogpt/docker-compose.yml
+
 
 
 ### Run with Dev Container
@@ -248,10 +244,15 @@ packages and launch AutoGPT.
     ```
 
 - On Windows:
-
     ```shell
     .\run.bat
     ```
 
 If this gives errors, make sure you have a compatible Python version installed. See also
 the [requirements](./installation.md#requirements).
+
+[Docker Hub]: https://hub.docker.com/r/significantgravitas/auto-gpt
+[openai/api limits]: https://platform.openai.com/docs/guides/rate-limits/overview#:~:text=Free%20trial%20users,RPM%0A40%2C000%20TPM
+[repository]: https://github.com/Significant-Gravitas/AutoGPT
+[show hidden files/macOS]: https://www.pcmag.com/how-to/how-to-access-your-macs-hidden-files
+[show hidden files/Windows]: https://support.microsoft.com/en-us/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5
